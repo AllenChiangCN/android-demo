@@ -31,6 +31,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.ext.kotlin_version"
     implementation "com.android.support:appcompat-v7:$rootProject.ext.support_appcompat_v7"
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.recyclerview_v7"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.ext.support_constraint_layout"
     testImplementation "junit:junit:$junit"
     androidTestImplementation "com.android.support.test:runner:$rootProject.ext.support_test_runner"
