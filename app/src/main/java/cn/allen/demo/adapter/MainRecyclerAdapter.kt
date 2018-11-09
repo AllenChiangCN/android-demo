@@ -10,6 +10,8 @@ import cn.allen.demo.R
 class MainRecyclerAdapter(private val titles: Array<String>) :
     RecyclerView.Adapter<MainRecyclerAdapter.MyViewHolder>() {
 
+    private var mOnItemClickListener: OnItemClickListener? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.layout_main_recycler_item, parent, false)
@@ -20,6 +22,20 @@ class MainRecyclerAdapter(private val titles: Array<String>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.tvTitle.text = titles[position]
+
+        holder.itemView.setOnClickListener {
+            if (mOnItemClickListener != null) {
+                mOnItemClickListener?.onItemClick(position)
+            }
+        }
+    }
+
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
+        mOnItemClickListener = onItemClickListener
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
     }
 
     class MyViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
