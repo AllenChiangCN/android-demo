@@ -10,4 +10,7 @@ ext {
     junit = '4.12'
     support_test_runner = '1.0.2'
     support_test_espresso_core = '3.0.2'
+    jpush_analytics = '1.2.2'
+    jpush_push = '3.1.7'
+    jpush_core = '1.2.6'
 }

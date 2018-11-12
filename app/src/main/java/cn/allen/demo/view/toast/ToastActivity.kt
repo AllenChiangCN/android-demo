@@ -1,12 +1,12 @@
 package cn.allen.demo.view.toast
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import cn.allen.demo.R
+import cn.allen.demo.base.BaseActivity
 
-class ToastActivity : AppCompatActivity() {
+class ToastActivity : BaseActivity() {
 
     private lateinit var mToolbar: Toolbar
 

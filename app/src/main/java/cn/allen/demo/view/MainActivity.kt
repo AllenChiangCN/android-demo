@@ -1,17 +1,18 @@
 package cn.allen.demo.view
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import cn.allen.demo.R
 import cn.allen.demo.adapter.MainRecyclerAdapter
+import cn.allen.demo.base.BaseActivity
 import cn.allen.demo.util.LaunchUtil
 import cn.allen.demo.view.toast.ToastActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     private lateinit var mTitles: Array<String>
 
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         init()
+        Log.d("test", "TAG = $TAG")
     }
 
     private fun init() {
