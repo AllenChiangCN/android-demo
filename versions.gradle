@@ -13,4 +13,5 @@ ext {
     jpush_analytics = '1.2.2'
     jpush_push = '3.1.7'
     jpush_core = '1.2.6'
+    timber = '4.7.1'
 }

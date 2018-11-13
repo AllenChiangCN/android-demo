@@ -5,7 +5,6 @@ import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
-import android.util.Log
 import cn.allen.demo.R
 import cn.allen.demo.adapter.MainRecyclerAdapter
 import cn.allen.demo.base.BaseActivity
@@ -29,7 +28,6 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
 
         init()
-        Log.d("test", "TAG = $TAG")
     }
 
     private fun init() {

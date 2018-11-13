@@ -1,6 +1,7 @@
 package cn.allen.demo
 
 import android.app.Application
+import cn.allen.toast.ToastUtils
 import cn.jiguang.analytics.android.api.JAnalyticsInterface
 import cn.jpush.android.api.JPushInterface
 
@@ -21,6 +22,7 @@ class App : Application() {
         mInstance = this
 
         initJiguang()
+        ToastUtils.init(this)
     }
 
     private fun initJiguang() {

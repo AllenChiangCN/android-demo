@@ -11,7 +11,7 @@ android {
         minSdkVersion rootProject.ext.min_sdk_version
         targetSdkVersion rootProject.ext.target_sdk_version
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         manifestPlaceholders = [
@@ -57,7 +57,9 @@ dependencies {
     implementation "cn.jiguang.sdk:janalytics:$rootProject.ext.jpush_analytics"
     implementation "cn.jiguang.sdk:jpush:$rootProject.ext.jpush_push"
     implementation "cn.jiguang.sdk:jcore:$rootProject.ext.jpush_core"
+    implementation "com.jakewharton.timber:timber:$rootProject.ext.timber"
     testImplementation "junit:junit:$junit"
     androidTestImplementation "com.android.support.test:runner:$rootProject.ext.support_test_runner"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.support_test_espresso_core"
+    debugImplementation project(':toast')
 }
