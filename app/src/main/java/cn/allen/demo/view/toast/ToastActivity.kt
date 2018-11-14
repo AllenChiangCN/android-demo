@@ -36,6 +36,9 @@ class ToastActivity : BaseActivity(), View.OnClickListener {
             R.id.btnCommonToast -> {
                 ToastUtils.showCommon(R.string.show_common_toast)
             }
+            R.id.btnCustomToast -> {
+                ToastUtils.showCustom(R.string.show_common_toast)
+            }
             else -> {
             }
         }
@@ -55,5 +58,6 @@ class ToastActivity : BaseActivity(), View.OnClickListener {
 
     private fun initEvents() {
         btnCommonToast.setOnClickListener(this)
+        btnCustomToast.setOnClickListener(this)
     }
 }

@@ -3,4 +3,5 @@
 
     <!-- ToastActivity -->
     <string name="show_common_toast">Show Common Toast</string>
+    <string name="show_custom_toast">Show Custom Toast</string>
 </resources>
