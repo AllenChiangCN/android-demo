@@ -9,6 +9,7 @@ import cn.allen.demo.R
 import cn.allen.demo.adapter.MainRecyclerAdapter
 import cn.allen.demo.base.BaseActivity
 import cn.allen.demo.util.LaunchUtil
+import cn.allen.demo.view.snackbar.SnackbarActivity
 import cn.allen.demo.view.toast.ToastActivity
 
 class MainActivity : BaseActivity() {
@@ -42,7 +43,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun initRecyclerView() {
-        mTitles = arrayOf(getString(R.string.toast))
+        mTitles = arrayOf(getString(R.string.toast), getString(R.string.snackbar))
         mRecyclerAdapter = MainRecyclerAdapter(mTitles)
         mLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         mRecyclerView = findViewById<RecyclerView>(R.id.recycler_view_main).apply {
@@ -53,7 +54,10 @@ class MainActivity : BaseActivity() {
         }
         mRecyclerAdapter.setOnItemClickListener(object : MainRecyclerAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
-                LaunchUtil.start(this@MainActivity, ToastActivity::class.java).launch()
+                when (position) {
+                    0 -> LaunchUtil.start(this@MainActivity, ToastActivity::class.java).launch()
+                    1 -> LaunchUtil.start(this@MainActivity, SnackbarActivity::class.java).launch()
+                }
             }
         })
     }

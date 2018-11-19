@@ -2,7 +2,6 @@ package cn.allen.demo.view.toast
 
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
-import android.view.MenuItem
 import android.view.View
 import cn.allen.demo.R
 import cn.allen.demo.base.BaseActivity
@@ -18,17 +17,6 @@ class ToastActivity : BaseActivity(), View.OnClickListener {
         setContentView(R.layout.activity_toast)
 
         init()
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
-            android.R.id.home -> {
-                finish()
-            }
-            else -> {
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     override fun onClick(v: View?) {
