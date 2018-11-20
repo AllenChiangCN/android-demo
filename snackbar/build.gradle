@@ -33,6 +33,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.ext.kotlin_version"
     implementation "com.android.support:appcompat-v7:$rootProject.ext.support_appcompat_v7"
+    implementation "com.android.support:design:$rootProject.ext.support_design"
     testImplementation "junit:junit:$rootProject.ext.junit"
     androidTestImplementation "com.android.support.test:runner:$rootProject.ext.support_test_runner"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.support_test_espresso_core"
